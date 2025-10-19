@@ -4,6 +4,9 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
+  app: {
+    layoutTransition: { name: "layout", mode: "out-in" },
+  },
   css: ["~/assets/css/main.css"],
   modules: ["@nuxt/image", "@nuxt/ui", "@nuxt/scripts"],
   image: {

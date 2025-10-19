@@ -20,3 +20,9 @@
 @theme {
   --font-poppins: Poppins, sans-serif;
 }
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
