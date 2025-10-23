@@ -6,6 +6,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     layoutTransition: { name: "layout", mode: "out-in" },
+    // NuxtLoadingIndicator: {
+    //   name: "default", // atau 'circle', 'bar', 'pulse', dll.
+    //   color: "#4F46E5",
+    //   background: "#fff",
+    // },
   },
   css: ["~/assets/css/main.css"],
   modules: ["@nuxt/image", "@nuxt/ui", "@nuxt/scripts"],

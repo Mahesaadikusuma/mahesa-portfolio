@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from "@nuxt/ui";
 const route = useRoute();
+const { slug } = route.params;
 
+console.log(slug);
 const items = computed<NavigationMenuItem[]>(() => [
   {
     label: "Home",
-    to: "/",
+    to: `/`,
     icon: "mdi:home",
     active: route.path.startsWith("/"),
   },
@@ -59,7 +61,10 @@ const items = computed<NavigationMenuItem[]>(() => [
     </template>
 
     <template #body>
-      <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
+      <UNavigationMenu
+        :items="items"
+        orientation="vertical"
+        class="-mx-2.5 cursor-pointer" />
     </template>
   </UHeader>
 </template>
