@@ -41,17 +41,17 @@ export const useCards = () => {
   const cards: CardItem[] = [
     {
       id: 1,
-      title: "Icons",
-      subTitle: "icon",
-      slug: "icons",
+      title: "PiutangKu",
+      subTitle: "piutangku skripsi aplikasi piutang akuntansi",
+      slug: "piutangku-skripsi-aplikasi-piutang-akuntansi",
       description:
-        "Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.",
+        "PiutangKu adalah sebuah aplikasi pengelolaan piutang akuntansi yang dibangun menggunakan Laravel dan Livewire sebagai full-stack framework. Dalam proses pengembangan, aplikasi ini menerapkan Repository Design Pattern untuk memisahkan logika bisnis dengan akses data sehingga kode lebih terstruktur, mudah diuji, dan mudah dikembangkan.Aplikasi PiutangKu dirancang untuk membantu pengguna dalam mencatat, memonitor, serta mengelola piutang dagang secara efisien. Pengguna dapat membuat transaksi piutang berdasarkan produk, menentukan tenor cicilan, serta melihat riwayat atau status pembayaran secara real time. Selain itu, sistem ini dilengkapi dengan fitur pembayaran online menggunakan Midtrans sebagai payment gateway, memungkinkan proses pelunasan piutang dilakukan secara otomatis, aman, dan lebih praktis.",
       icon: "",
       orientation: "vertical",
-      images: "/images/Furniluxe.webp",
-      to: "/projects/icons",
+      images: "/images/piutangku/Home Page.png",
+      to: "/projects/piutangku-skripsi-aplikasi-piutang-akuntansi",
       demo: "",
-      githubLink: "",
+      githubLink: "https://github.com/Mahesaadikusuma/piutang-skripsi",
       icons: [
         {
           id: 1,
@@ -60,7 +60,78 @@ export const useCards = () => {
           to: "/",
         },
       ],
-      galleries: [],
+      galleries: [
+        {
+          id: 1,
+          title: "gallery 1",
+          src: "/images/piutangku/Home Page.png",
+        },
+        {
+          id: 2,
+          title: "gallery 2",
+          src: "/images/piutangku/Login.png",
+        },
+        {
+          id: 3,
+          title: "gallery 3",
+          src: "/images/piutangku/Register.png",
+        },
+        {
+          id: 4,
+          title: "gallery 4",
+          src: "/images/piutangku/Dashboard-admin.png",
+        },
+        {
+          id: 5,
+          title: "gallery 5",
+          src: "/images/piutangku/Dashboard-admin-piutang.png",
+        },
+        {
+          id: 6,
+          title: "gallery 6",
+          src: "/images/piutangku/Dashboard-admin-piutang-product.png",
+        },
+        {
+          id: 7,
+          title: "gallery 7",
+          src: "/images/piutangku/Dashboard-admin-piutang-product-create.png",
+        },
+        {
+          id: 8,
+          title: "gallery 8",
+          src: "/images/piutangku/export-excel-piutang.png",
+        },
+        {
+          id: 9,
+          title: "gallery 9",
+          src: "/images/piutangku/Export-data-mou.png",
+        },
+        {
+          id: 9,
+          title: "gallery 9",
+          src: "/images/piutangku/export-pdf-piutang.png",
+        },
+        {
+          id: 10,
+          title: "gallery 10",
+          src: "/images/piutangku/export-piutang-detail-pdf.png",
+        },
+        {
+          id: 11,
+          title: "gallery 11",
+          src: "/images/piutangku/export-piutang-product-excel.png",
+        },
+        {
+          id: 12,
+          title: "gallery 12",
+          src: "/images/piutangku/invoice-piutang-pdf.png",
+        },
+        {
+          id: 13,
+          title: "gallery 13",
+          src: "/images/piutangku/Midtrans.png",
+        },
+      ],
     },
     {
       id: 2,
@@ -160,16 +231,16 @@ export const useCards = () => {
           title: "gallery 1",
           src: "/images/thumbnail-capstone.jpg",
         },
-        {
-          id: 2,
-          title: "gallery 2",
-          src: "https://picsum.photos/640/640?random=1",
-        },
-        {
-          id: 3,
-          title: "gallery 3",
-          src: "https://picsum.photos/640/640?random=2",
-        },
+        // {
+        //   id: 2,
+        //   title: "gallery 2",
+        //   src: "https://picsum.photos/640/640?random=1",
+        // },
+        // // {
+        // //   id: 3,
+        // //   title: "gallery 3",
+        // //   src: "https://picsum.photos/640/640?random=2",
+        // // },
       ],
     },
     {

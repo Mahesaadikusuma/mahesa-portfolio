@@ -72,7 +72,7 @@ const changeMainImage = (src: string) => {
               loading="lazy"
               :src="mainImage"
               :alt="card.title"
-              class="w-full rounded-xl shadow-md transition-all duration-300 max-h-[600px] object-cover" />
+              class="w-full rounded-xl shadow-md transition-all duration-300 max-h-[800px] object-cover" />
 
             <div
               v-if="card.galleries && card.galleries.length > 2"
@@ -93,7 +93,7 @@ const changeMainImage = (src: string) => {
                     :src="item.src"
                     width="320"
                     height="320"
-                    class="rounded-lg max-h-[200px] opacity-50"
+                    class="rounded-lg h-[200px] object-cover opacity-50"
                     :class="{
                       'opacity-100': mainImage === item.src,
                       'opacity-50 hover:opacity-100': mainImage !== item.src,
@@ -103,21 +103,13 @@ const changeMainImage = (src: string) => {
             </div>
           </div>
 
-          <!-- <div class="">
-            <UCarousel
-              v-slot="{ item }"
-              dots
-              :items="items"
-              :ui="{ item: 'basis-1/3' }">
-              <img :src="item" width="320" height="320" class="rounded-lg" />
-            </UCarousel>
-          </div> -->
-
           <div class="">
             <h2 class="capitalize font-poppins text-xl font-semibold">
               {{ card.title }}
             </h2>
-            <p class="text-xs font-serif">{{ card.description }}</p>
+            <p class="text-sm font-serif text-justify">
+              {{ card.description }}
+            </p>
 
             <hr
               v-if="card.features && card.techs"
