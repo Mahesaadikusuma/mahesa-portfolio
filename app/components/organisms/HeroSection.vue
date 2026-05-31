@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 const roles = ["Front-End Developer.", "Back-End Developer.", "Full Stack Developer."];
 const displayText = ref("");
 const isDeleting = ref(false);
@@ -7,7 +8,9 @@ const charIndex = ref(0);
 
 onMounted(() => {
   const type = () => {
-    const current = roles[roleIndex.value];
+    const current = roles[roleIndex.value] || "";
+    if (!current) return;
+
     if (!isDeleting.value) {
       displayText.value = current.slice(0, charIndex.value + 1);
       charIndex.value++;
@@ -95,14 +98,13 @@ onMounted(() => {
 
           <!-- Terminal Topbar -->
           <div class="flex items-center gap-2 px-5 py-3.5 bg-gray-100 dark:bg-[#0f172a] border-b border-gray-200 dark:border-gray-800">
-            <div class="w-3 h-3 rounded-full bg-red-400"></div>
-            <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
-            <div class="w-3 h-3 rounded-full bg-green-400"></div>
+            <AtomsWindowIndicators/>
             <span class="ml-3 text-xs text-gray-500 dark:text-gray-500">mahesa.ts</span>
           </div>
 
           <!-- Code Body -->
-          <div class="bg-white dark:bg-[#0b1120] px-6 py-6 text-sm leading-7">
+          <MoleculesDeveloperCard />
+          <!-- <div class="bg-white dark:bg-[#0b1120] px-6 py-6 text-sm leading-7">
             <p><span class="text-violet-500 dark:text-violet-400">const</span> <span class="text-blue-600 dark:text-blue-400">developer</span> <span class="text-gray-600 dark:text-gray-300">=</span> <span class="text-gray-600 dark:text-gray-300">{</span></p>
             <p class="pl-6"><span class="text-green-600 dark:text-emerald-400">name</span><span class="text-gray-600 dark:text-gray-300">:</span> <span class="text-amber-600 dark:text-yellow-300">"Mahesa Adi Kusuma"</span><span class="text-gray-600 dark:text-gray-300">,</span></p>
             <p class="pl-6"><span class="text-green-600 dark:text-emerald-400">role</span><span class="text-gray-600 dark:text-gray-300">:</span> <span class="text-amber-600 dark:text-yellow-300">"Full Stack Developer"</span><span class="text-gray-600 dark:text-gray-300">,</span></p>
@@ -114,8 +116,8 @@ onMounted(() => {
             <p class="pl-6"><span class="text-green-600 dark:text-emerald-400">available</span><span class="text-gray-600 dark:text-gray-300">:</span> <span class="text-orange-600 dark:text-orange-400">true</span><span class="text-gray-600 dark:text-gray-300">,</span></p>
             <p><span class="text-gray-600 dark:text-gray-300">}</span></p>
             <p class="mt-2 text-gray-400 dark:text-gray-600"><span class="text-primary">// </span><span>Let's build something great! 🚀</span></p>
-          </div>
-        </div>
+          </div> -->
+        </div> 
       </div>
 
     </div>
