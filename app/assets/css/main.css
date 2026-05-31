@@ -10,10 +10,10 @@
 }
 
 .dark {
-  --ui-bg: var(--ui-color-neutral-900);
-  --ui-bg-muted: var(--ui-color-neutral-800);
-  --ui-bg-elevated: var(--ui-color-neutral-800);
-  --ui-bg-accented: var(--ui-color-neutral-700);
+  --ui-bg: #0b1120;
+  --ui-bg-muted: #0f172a;
+  --ui-bg-elevated: #1e293b;
+  --ui-bg-accented: #334155;
   --ui-bg-inverted: var(--color-white);
 }
 

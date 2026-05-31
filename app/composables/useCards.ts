@@ -1,25 +1,25 @@
-interface CardIcon {
+export interface CardIcon {
   id: number;
   icon: string;
   color?: string;
   title: string;
   to: string;
 }
-interface feature {
+export interface feature {
   id: number;
   title: string;
 }
-interface technologi {
+export interface technologi {
   id: number;
   title: string;
 }
-interface galleries {
+export interface galleries {
   id: number;
   title: string;
   src: string;
 }
 
-interface CardItem {
+export interface CardItem {
   id: number;
   title: string;
   subTitle?: string;

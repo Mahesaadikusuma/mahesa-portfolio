@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     // },
   },
   css: ["~/assets/css/main.css"],
-  modules: ["@nuxt/image", "@nuxt/ui", "@nuxt/scripts"],
+  modules: ["@nuxt/image", "@nuxt/ui", "@nuxt/scripts", "@vueuse/motion/nuxt"],
   image: {
     inject: true,
   },

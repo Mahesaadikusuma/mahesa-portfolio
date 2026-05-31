@@ -3,7 +3,7 @@
 <template>
   <NuxtLoadingIndicator />
   <UApp>
-    <Navigation />
+    <OrganismsNavigation />
     <NuxtPage />
   </UApp>
 </template>
