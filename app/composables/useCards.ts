@@ -5,15 +5,15 @@ export interface CardIcon {
   title: string;
   to: string;
 }
-export interface feature {
+export interface Feature {
   id: number;
   title: string;
 }
-export interface technologi {
+export interface Technology {
   id: number;
   title: string;
 }
-export interface galleries {
+export interface Gallery {
   id: number;
   title: string;
   src: string;
@@ -25,16 +25,16 @@ export interface CardItem {
   subTitle?: string;
   slug: string;
   description: string;
-  icon: string;
+  icon?: string;
   orientation?: "vertical" | "horizontal";
   images: string;
   to: string;
-  demo: string;
-  githubLink: string;
+  demo?: string;
+  githubLink?: string;
   icons: CardIcon[];
-  features?: feature[];
-  techs?: technologi[];
-  galleries: galleries[];
+  features?: Feature[];
+  techs?: Technology[];
+  galleries: Gallery[];
 }
 
 export const useCards = () => {
@@ -151,25 +151,25 @@ export const useCards = () => {
           id: 1,
           icon: "devicon:webpack",
           color: "bg-blue-600",
-          title: "Home",
+          title: "Webpack",
           to: "/",
         },
         {
           id: 2,
           icon: "devicon:laravel",
           color: "bg-red-600",
-          title: "Home",
+          title: "Laravel",
           to: "/",
         },
         {
           id: 3,
           icon: "vscode-icons:file-type-scss",
           color: "bg-pink-600",
-          title: "Home",
+          title: "Scss",
           to: "/",
         },
         {
-          id: 3,
+          id: 4,
           icon: "skill-icons:bootstrap",
           color: "bg-blue-800",
           title: "Home",
@@ -215,12 +215,12 @@ export const useCards = () => {
             "Laravel: Digunakan untuk API back-end, mengelola data dan operasi sisi server secara efisien",
         },
         {
-          id: 5,
+          id: 6,
           title:
             "Axios: Digunakan untuk melakukan pengambilan data dari back-end dengan mudah dan efisien",
         },
         {
-          id: 5,
+          id: 7,
           title:
             "URL Dinamis dengan Slug: Meningkatkan SEO dan memperbaiki pengalaman pengguna dengan menciptakan URL yang mudah dibaca dan deskriptif",
         },
