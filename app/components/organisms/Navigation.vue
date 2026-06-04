@@ -85,13 +85,10 @@ const items = computed<NavigationMenuItem[]>(() => [
     <!-- Mobile Drawer -->
     <template #body>
       <div class="flex flex-col gap-4 py-4">
-        <!-- Brand in Drawer -->
         <div class="flex items-center gap-2 px-3 py-2 bg-gray-100 dark:bg-white/5 rounded-xl border border-gray-200 dark:border-white/10">
           <UIcon name="i-simple-icons-github" class="text-gray-500 dark:text-gray-400 w-4 h-4 shrink-0" />
-          <span class="text-sm font-medium text-gray-600 dark:text-gray-300">mahesa-portofolio</span>
+          <span class="text-sm font-medium text-gray-600 dark:text-gray-300">Mahesa Adi Kusuma Portofolio</span>
         </div>
-
-        <UDivider class="opacity-50" />
 
         <UNavigationMenu
           :items="items"
