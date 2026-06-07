@@ -17,7 +17,7 @@ const props = withDefaults(defineProps<{
   badgeText: 'Available for new projects',
   headlinePart1: 'Crafting Digital Experiences,',
   headlinePart2: 'Line by Line.',
-  description: 'Halo, saya Mahesa Adi Kusuma. Seorang Full Stack Developer yang berfokus membangun aplikasi web berskala besar, aman, dan berkinerja tinggi menggunakan teknologi modern.',
+  // description: 'Halo, saya Mahesa Adi Kusuma. Seorang Full Stack Developer yang berfokus membangun aplikasi web berskala besar, aman, dan berkinerja tinggi menggunakan teknologi modern.',
   tabs: () => [
     { id: 'ts', name: 'mahesa.ts', icon: 'i-vscode-icons-file-type-typescript-official' },
     { id: 'php', name: 'Developer.php', icon: 'i-vscode-icons-file-type-php' },

@@ -1,3 +1,42 @@
+<script setup lang="ts">
+const skills = [
+  { name: "HTML", icon: "i-vscode-icons-file-type-html" },
+  { name: "CSS", icon: "i-vscode-icons-file-type-css" },
+  { name: "JavaScript", icon: "i-vscode-icons-file-type-js" },
+  { name: "TypeScript", icon: "i-vscode-icons-file-type-typescript" },
+  { name: "Vue.js", icon: "i-vscode-icons-file-type-vue" },
+  { name: "Nuxt.js", icon: "i-vscode-icons-file-type-nuxt" },
+  { name: "PHP", icon: "i-devicon-php" },
+  { name: "Laravel", icon: "i-devicon-laravel" },
+  { name: "Tailwind CSS", icon: "i-vscode-icons-file-type-tailwind" },
+  { name: "Bootstrap CSS", icon: "i-logos:bootstrap" },
+  { name: "Figma", icon: "i-devicon-figma" },
+  { name: "MySQL", icon: "i-devicon-mysql" },
+];
+
+const experiences = [
+  {
+    title: "Internship — Brainmatics",
+    type: "Full-Stack Web Developer Intern",
+    period: "Agustus 2024 – Desember 2024",
+    icon: "i-heroicons-briefcase",
+    color: "bg-blue-500",
+    description:
+      "Terlibat aktif dalam pengembangan dan pemeliharaan produk perangkat lunak untuk klien sektor pemerintahan. Bekerja secara end-to-end dalam siklus pengembangan aplikasi, mulai dari implementasi fitur baru, perbaikan sistem legacy (bug fixing), hingga restrukturisasi antarmuka untuk meningkatkan User Experience (UX). Beradaptasi dengan berbagai teknologi yang digunakan pada setiap proyek klien.",
+  },
+  {
+    title: "SIB Dicoding Cycle 6",
+    type: "Front-End & Back-End Student",
+    period: "Februari 2024 – Juni 2024",
+    icon: "i-heroicons-academic-cap",
+    color: "bg-green-500",
+    description:
+      "Program Studi Independen Bersertifikat (SIB) Kampus Merdeka yang berfokus pada pengembangan keahlian Front-End dan Back-End. Selama program, saya menyelesaikan berbagai modul komprehensif dan proyek pengembangan web, yang diakhiri dengan pengerjaan Capstone Project sebagai implementasi nyata dari teknologi yang dipelajari.",
+  },
+];
+</script>
+
+
 <template>
   <section id="about" class="py-20 lg:py-32 w-full">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,16 +56,16 @@
         <div class="space-y-10" v-motion-slide-visible-bottom :delay="100">
 
           <!-- Bio -->
-          <div>
+        <div>
             <div class="flex items-center gap-3 mb-6">
               <div class="h-8 w-1.5 bg-primary rounded-full"></div>
               <h4 class="font-poppins text-2xl font-bold text-gray-900 dark:text-white">Bio</h4>
             </div>
             <p class="text-gray-600 dark:text-gray-400 leading-loose text-justify">
-              I'm <span class="font-semibold text-gray-900 dark:text-white">Mahesa Adi Kusuma</span>, a Fresh Graduate from Esa Unggul University, majoring in Informatics Engineering. I have a strong passion for the IT field, especially in web development as a Front End, Back End, or Full Stack Developer.
+              Saya <span class="font-semibold text-gray-900 dark:text-white">Mahesa Adi Kusuma</span>, seorang Fresh Graduate jurusan Teknik Informatika dari Universitas Esa Unggul Program Studi Teknik Informatika dengan IPK akhir 3.75. Saya memiliki minat yang besar di bidang IT, khususnya dalam pengembangan web sebagai Front-End, Back-End, maupun Full-Stack Developer.
             </p>
             <p class="text-gray-600 dark:text-gray-400 leading-loose text-justify mt-4">
-              I'm skilled in HTML, CSS, JavaScript, and PHP, with hands-on experience using frameworks like Laravel and Tailwind CSS. I'm also proficient in Figma for website design and capable of transforming designs into fully functional and responsive web interfaces. 🚀 Let's build something great together!
+              Saya memiliki keahlian dalam HTML, CSS, JavaScript, dan PHP, serta pengalaman praktis menggunakan framework seperti Laravel dan Tailwind CSS.
             </p>
           </div>
 
@@ -109,39 +148,4 @@
   </section>
 </template>
 
-<script setup lang="ts">
-const skills = [
-  { name: "HTML", icon: "i-vscode-icons-file-type-html" },
-  { name: "CSS", icon: "i-vscode-icons-file-type-css" },
-  { name: "JavaScript", icon: "i-vscode-icons-file-type-js" },
-  { name: "TypeScript", icon: "i-vscode-icons-file-type-typescript" },
-  { name: "Vue.js", icon: "i-vscode-icons-file-type-vue" },
-  { name: "Nuxt.js", icon: "i-vscode-icons-file-type-nuxt" },
-  { name: "PHP", icon: "i-devicon-php" },
-  { name: "Laravel", icon: "i-devicon-laravel" },
-  { name: "Tailwind CSS", icon: "i-vscode-icons-file-type-tailwind" },
-  { name: "Figma", icon: "i-devicon-figma" },
-  { name: "MySQL", icon: "i-devicon-mysql" },
-];
 
-const experiences = [
-  {
-    title: "Internship — Brainmatic",
-    type: "Internship",
-    period: "Aug 2024 – Dec 2024",
-    icon: "i-heroicons-briefcase",
-    color: "bg-blue-500",
-    description:
-      "Worked as a full-stack web developer intern, building and improving features using Laravel, React, Bootstrap, Tailwind CSS, and MySQL. Focused on creating clean and maintainable code for real client projects.",
-  },
-  {
-    title: "SIB Dicoding Cycle 6",
-    type: "Front-End & Back-End Student",
-    period: "Feb 2024 – Jun 2024",
-    icon: "i-heroicons-academic-cap",
-    color: "bg-green-500",
-    description:
-      "Kampus Merdeka Independent Study program designed to produce graduates with high-level competencies. Completed various modules and projects, culminating in a Capstone Project as a real implementation of acquired skills.",
-  },
-];
-</script>

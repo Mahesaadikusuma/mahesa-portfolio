@@ -24,7 +24,7 @@ const changeMainImage = (src: string) => {
       <div v-motion-slide-bottom>
         <UButton
           to="/"
-          color="gray"
+          color="neutral"
           variant="ghost"
           icon="i-mdi-arrow-left-circle-outline"
           class="mb-4"
@@ -40,7 +40,7 @@ const changeMainImage = (src: string) => {
           {{ card.subTitle }}
         </p>
 
-        <UDivider class="my-6" type="dashed" />
+        <UDivider class="my-6" type="" />
       </div>
 
       <!-- Tech Stack & Links -->
@@ -56,7 +56,7 @@ const changeMainImage = (src: string) => {
             <UButton
               :to="ic.to"
               target="_blank"
-              color="gray"
+              color="neutral"
               variant="soft"
               size="sm"
               :icon="ic.icon"
@@ -71,7 +71,7 @@ const changeMainImage = (src: string) => {
             v-if="card.githubLink"
             :to="card.githubLink"
             target="_blank"
-            color="black"
+            color="neutral"
             variant="solid"
             icon="i-mdi-github"
           >
@@ -94,6 +94,7 @@ const changeMainImage = (src: string) => {
       <!-- Image Gallery -->
       <div v-motion-fade :delay="200" class="flex flex-col gap-4">
         <NuxtImg
+          v-if="mainImage"
           format="webp"
           loading="lazy"
           :src="mainImage"

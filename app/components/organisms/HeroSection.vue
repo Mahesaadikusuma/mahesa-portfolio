@@ -29,6 +29,7 @@ const currentTab = ref('ts');
 
     <HeroCenteredStack 
       v-model:active-tab="currentTab"
+      description=""
       :tabs="tabs"
     />
 
