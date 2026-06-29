@@ -1,8 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const toaster = { position: 'top-right' as const }
+</script>
 
 <template>
   <NuxtLoadingIndicator />
-  <UApp>
+  <UApp :toaster="toaster">
     <OrganismsNavigation />
     <NuxtPage />
   </UApp>

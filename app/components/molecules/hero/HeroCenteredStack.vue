@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const { cards } = useCards();
+
 export interface Tab {
   id: string;
   name: string;
@@ -82,7 +84,7 @@ const emit = defineEmits<{
           <UIcon name="i-heroicons-check-circle-solid" class="w-6 h-6" />
         </div>
         <div>
-          <p class="text-sm font-bold text-gray-900 dark:text-white">10+ Projects</p>
+          <p class="text-sm font-bold text-gray-900 dark:text-white">{{ cards.length }} Projects</p>
           <p class="text-xs text-gray-500 dark:text-gray-400">Successfully completed</p>
         </div>
       </div>

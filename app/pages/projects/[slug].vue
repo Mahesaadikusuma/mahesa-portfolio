@@ -102,7 +102,7 @@ const changeMainImage = (src: string) => {
           class="w-full rounded-2xl shadow-lg transition-all duration-500 max-h-[600px] object-cover border border-gray-200 dark:border-gray-800"
         />
 
-        <div v-if="card.galleries && card.galleries.length > 2" class="mt-4 px-2">
+        <div v-if="card.galleries && card.galleries.length > 1" class="mt-4 px-2">
           <UCarousel
             v-slot="{ item }"
             :items="card.galleries"
@@ -147,7 +147,7 @@ const changeMainImage = (src: string) => {
 
         <!-- Features & Tech Grid -->
         <div v-if="card.features || card.techs" class="grid grid-cols-1 md:grid-cols-1 gap-10">
-          <div v-if="card.features" v-motion-slide-visible-bottom class="space-y-6">
+          <div v-if="card.features && card.features.length > 0"" v-motion-slide-visible-bottom class="space-y-6">
             <div class="flex items-center gap-3">
               <div class="p-2.5 bg-primary/10 dark:bg-primary/20 rounded-xl text-primary">
                 <UIcon name="i-heroicons-star" class="w-6 h-6" />
@@ -164,7 +164,7 @@ const changeMainImage = (src: string) => {
             </ul>
           </div>
 
-          <div v-if="card.techs" v-motion-slide-visible-bottom :delay="100" class="space-y-6">
+          <div v-if="card.techs && card.techs.length > 0" v-motion-slide-visible-bottom :delay="100" class="space-y-6">
             <div class="flex items-center gap-3">
               <div class="p-2.5 bg-primary/10 dark:bg-primary/20 rounded-xl text-primary">
                 <UIcon name="i-heroicons-cpu-chip" class="w-6 h-6" />

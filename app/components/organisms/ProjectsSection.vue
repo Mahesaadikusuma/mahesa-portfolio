@@ -1,10 +1,44 @@
 <script setup lang="ts">
 const { cards } = useCards();
+
+const page = ref(1);
+// Ubah angka ini untuk sementara waktu menjadi 2
+const itemPerPage = ref(4); 
+
+const paginatedCards = computed(() => {
+  const startIndex = (page.value - 1) * itemPerPage.value;
+  const endIndex = startIndex + itemPerPage.value;
+  return cards.slice(startIndex, endIndex);
+})
+
+
+const initialShow = 3; // Jumlah project yang langsung muncul saat halaman pertama kali dibuka
+const step = 3; // Jumlah project tambahan yang muncul setiap kali tombol "Load More" ditekan
+const toast = useToast();
+const visibleCount = ref(initialShow);
+
+// Computed property untuk memotong array dari index 0 sampai batas visibleCount
+const displayedCards = computed(() => {
+  return cards.slice(0, visibleCount.value);
+});
+
+// Fungsi untuk mengeksekusi penambahan data
+const loadMore = () => {
+  visibleCount.value += step;
+  
+   toast.add({
+    title: 'Project Added',
+    description: `You have added ${visibleCount.value} projects.`,
+    icon: 'i-lucide-check-circle',
+    color: 'primary',
+    duration: 3000,
+  })
+};
 </script>
 
 <template>
   <section id="projects" class="py-20 lg:py-32 w-full">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <UContainer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
       <div 
@@ -17,15 +51,15 @@ const { cards } = useCards();
         <h3 class="font-poppins text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
           Featured Projects
         </h3>
-        <p class="text-gray-600 dark:text-gray-400 text-base md:text-lg">
+        <!-- <p class="text-gray-600 dark:text-gray-400 text-base md:text-lg">
           Beberapa proyek unggulan yang pernah saya kerjakan, berfokus pada desain antarmuka yang modern, responsif, dan performa yang optimal.
-        </p>
+        </p> -->
       </div>
 
       <!-- Projects Grid -->
       <UPageGrid>
         <div
-          v-for="(card, index) in cards"
+          v-for="(card, index) in displayedCards"
           :key="card.id"
           v-motion-slide-visible-bottom
           :delay="index * 100"
@@ -38,7 +72,7 @@ const { cards } = useCards();
             spotlight
             spotlight-color="primary"
             class="group h-full"
-            :ui="{ wrapper: 'ring-1 ring-gray-200 dark:ring-gray-800 h-full' }"
+            
           >
             <!-- Image Container with Hover Zoom -->
             <div class="w-full relative aspect-[4/3] sm:aspect-video overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800/50">
@@ -69,7 +103,49 @@ const { cards } = useCards();
           </UPageCard>
         </div>
       </UPageGrid>
-      
-    </div>
+
+      <!-- Pagination -->
+      <!-- <div class="flex justify-between items-center mt-12" v-if="cards.length > itemPerPage">
+        <div class="text-sm text-gray-500 dark:text-gray-400 font-medium">
+          memb`ulatkan ke atas jika ada sisa data
+          Halaman {{ page }} dari {{ Math.ceil(cards.length / itemPerPage) }} (Total {{ cards.length }} Project)
+        </div>
+        <UPagination 
+          v-model:page="page"
+          :items-per-page="itemPerPage" 
+          :total="cards.length" 
+          show-edges 
+          :sibling-count="1" 
+        />
+        
+      </div> -->
+
+      <!-- Area Tombol Load More -->
+      <div 
+        class="flex justify-center mt-16" 
+        v-if="visibleCount < cards.length"
+        v-motion-fade
+      >
+        <UButton
+          @click="loadMore"
+          size="lg"
+          color="primary"
+          variant="soft"
+          icon="i-heroicons-chevron-double-down"
+          class="px-8 py-3 rounded-full font-medium cursor-pointer transition-transform duration-300 hover:scale-105"
+        >
+          Tampilkan Lebih Banyak
+        </UButton>
+      </div>
+
+      <div 
+        class="flex justify-center mt-16 text-gray-500 dark:text-gray-400 text-sm font-medium" 
+        v-else-if="cards.length > initialShow"
+      >
+        <UIcon name="i-heroicons-check-circle" class="w-5 h-5 mr-2 text-primary" />
+        Semua project telah ditampilkan
+      </div>
+
+    </UContainer>
   </section>
 </template>
