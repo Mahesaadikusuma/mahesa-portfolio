@@ -40,7 +40,7 @@ const changeMainImage = (src: string) => {
           {{ card.subTitle }}
         </p>
 
-        <UDivider class="my-6" type="" />
+        <USeparator  class="my-6" />
       </div>
 
       <!-- Tech Stack & Links -->
@@ -143,7 +143,7 @@ const changeMainImage = (src: string) => {
           </p>
         </div>
 
-        <UDivider v-if="card.features || card.techs" class="opacity-50" />
+        <USeparator  v-if="card.features || card.techs" class="opacity-50" />
 
         <!-- Features & Tech Grid -->
         <div v-if="card.features || card.techs" class="grid grid-cols-1 md:grid-cols-1 gap-10">

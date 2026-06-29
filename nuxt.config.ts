@@ -8,7 +8,13 @@ export default defineNuxtConfig({
     layoutTransition: { name: "layout", mode: "out-in" },
   },
   css: ["~/assets/css/main.css"],
-  modules: ["@nuxt/image", "@nuxt/ui", "@nuxt/scripts", "@vueuse/motion/nuxt"],
+  modules: [
+    "@nuxt/image",
+    "@nuxt/ui",
+    "@nuxt/scripts",
+    "@vueuse/motion/nuxt",
+    "@nuxt/fonts",
+  ],
   image: {
     inject: true,
   },

@@ -5,9 +5,9 @@
     <div class="px-4">
       <OrganismsHeroSection />
       <MoleculesConnectSection />
-      <OrganismsAboutSection />
-      <OrganismsProjectsSection />
+      <LazyOrganismsAboutSection />
+      <LazyOrganismsProjectsSection />
     </div>
-    <OrganismsFooterSection />
+    <LazyOrganismsFooterSection />
   </div>
 </template>
